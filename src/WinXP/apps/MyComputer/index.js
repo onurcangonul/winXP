@@ -23,6 +23,8 @@ import cd from 'assets/windowsIcons/111(48x48).png';
 import dropdown from 'assets/windowsIcons/dropdown.png';
 import pullup from 'assets/windowsIcons/pullup.png';
 import logo from 'assets/github-logo.png';
+import linkedln from 'assets/windowsIcons/linkedln.svg';
+
 import mine from 'assets/minesweeper/mine-icon.png';
 import windows from 'assets/windowsIcons/windows.png';
 
@@ -333,39 +335,59 @@ function MyComputer({ onClose }) {
                 </div>
               </div>
             </div>
-            <div className="com__content__right__card com__content__right__card--me">
+            <div className="com__content__right__card">
               <div className="com__content__right__card__header">
                 About Me :)
               </div>
               <div className="com__content__right__card__content">
-                <a
-                  href="https://github.com/ShizukuIchi"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="com__content__right__card__item--me"
-                >
-                  <img
-                    className="com__content__right__card__img"
-                    src={logo}
-                    alt="control"
-                  />
-                  <div className="com__content__right__card__text">Github</div>
-                </a>
-                <a
-                  href="https://sh1zuku.csie.io"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="com__content__right__card__item--me"
-                >
-                  <img
-                    className="com__content__right__card__img"
-                    src="https://a.ppy.sh/2926513_1448497605.png"
-                    alt="control"
-                  />
-                  <div className="com__content__right__card__text">
-                    My Website
+                <div className="com__content__right__card__item">
+                  <div className="com__content__right__card__img-container">
+                    <a
+                      href="https://www.linkedin.com/in/onurcangonul/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={linkedln}
+                        alt="cd"
+                        className="com__content__right__card__img"
+                      />
+                    </a>
                   </div>
-                </a>
+                  <div className="com__content__right__card__text">
+                    <a
+                      href="https://www.linkedin.com/in/onurcangonul/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Linkedin
+                    </a>
+                  </div>
+                </div>
+                <div className="com__content__right__card__item">
+                  <div className="com__content__right__card__img-container">
+                    <a
+                      href="https://github.com/onurcgnl"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img
+                        src={logo}
+                        alt="cd"
+                        className="com__content__right__card__img"
+                      />
+                    </a>
+                  </div>
+                  <div className="com__content__right__card__text">
+                    <a
+                      href="https://github.com/onurcgnl"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      My Github
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
