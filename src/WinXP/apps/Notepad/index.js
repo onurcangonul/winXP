@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import styled from 'styled-components';
-
-import { WindowDropDowns } from 'components';
-import dropDownData from './dropDownData';
-
+import MyCv from '../../../assets/Onurcan-Gonul-Cv.pdf'
+export const PDFViewer = () => {
+  const pdfPath = "'../../../assets/Onurcan-Gonul-Cv.pdf";
+  return (
+    <div>
+      <iframe
+        title="PDF Viewer"
+        width="100%"
+        height="500px"
+        src={MyCv}
+        frameBorder="0"
+      />
+    </div>
+  );
+};
 export default function Notepad({ onClose }) {
   const [docText, setDocText] = useState('');
   const [wordWrap, setWordWrap] = useState(false);
-
   function onClickOptionItem(item) {
     switch (item) {
       case 'Exit':
@@ -46,15 +56,8 @@ export default function Notepad({ onClose }) {
   return (
     <Div>
       <section className="np__toolbar">
-        <WindowDropDowns items={dropDownData} onClickItem={onClickOptionItem} />
+        <PDFViewer/>
       </section>
-      <StyledTextarea
-        wordWrap={wordWrap}
-        value={docText}
-        onChange={e => setDocText(e.target.value)}
-        onKeyDown={onTextAreaKeyDown}
-        spellCheck={false}
-      />
     </Div>
   );
 }
